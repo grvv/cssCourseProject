@@ -48,10 +48,14 @@ header {
     height: 100vh
 }
 
+/* Normal Navbar */
+
 .logoImage {
     height: 100px;
     margin-top: 15px;
 }
+
+.blackLogoImage { display: none; }
 
 .navbarMenu {
     list-style: none;
@@ -79,6 +83,65 @@ header {
 .navbarMenu li a:hover,
 .navbarMenu li a:active {
     border-bottom: 2px solid #d35400;
+}
+
+/* Sticky Navbar */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    -webkit-box-shadow : 0 2px 2px #efefef;
+            box-shadow : 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .blackLogoImage {
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+}
+
+.sticky .logoImage { display: none }
+.sticky .navbarMenu { 
+    margin-top: 15px;
+}
+.sticky .navbarMenu li a {
+    color: #555;
+    padding-bottom: 10px;
+}
+
+.sticky #navButton {
+    color: #000;
+    margin-top: 7px;
+}
+
+/* Navbar Button for small devices */
+#navButton {
+    display: none;
+}
+
+#navbarItems {
+    background-color: #fff;
+    text-align: center;
+    /* margin: 0 10px;  */
+}
+
+#navbarItems ul {
+    list-style: none;
+}
+
+#navbarItems li {
+    padding: 10px 5px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#navbarItems li a {
+    text-decoration: none;
+    color : #555;
+    font-size: 150%;
 }
 
 .firstSectionTextBox {
@@ -302,6 +365,7 @@ h2::after {
 .work-step div {
     font-size: 150%;
     border: 2px solid #d35400;
+    font-weight: 400;
     border-radius: 50%;
     padding: 7px;
     /* display: inline-block; */
@@ -637,3 +701,18 @@ footer {
 }
 
 /* CSS AutoPrefixer is used to make it cross-browser */
+
+#animateSectionTwo, #phoneAnimation {
+    opacity: 0;
+}
+
+#animateSectionTwo.animated,
+#phoneAnimation.animated
+{
+    opacity: 1;
+}
+
+/* Display none class */
+.displayNone {
+    display: none;
+}

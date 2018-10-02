@@ -21,6 +21,9 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="./vendors/css/ionicons.min.css">
 
+  <!-- Amimate CSS -->
+  <link rel="stylesheet" href="./vendors/css/animate.css">
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./resources/css/styles.css">
 
@@ -29,6 +32,20 @@
 
   <!-- Google Font Lato -->
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+
+  <!-- Favicons -->
+  <!-- https://realfavicongenerator.net/ -->
+  <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
+  <link rel="manifest" href="resources/favicon/site.webmanifest">
+  <link rel="mask-icon" href="resources/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="resources/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="resources/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Optimize images from optimizilla.com -->
 </head>
 
 <body>
@@ -37,29 +54,60 @@
     <nav>
       <div class="row">
         <img class="logoImage" src="./resources/img/logo-white.png" alt="Logo">
+        <img class="blackLogoImage" src="./resources/img/logo.png" alt="blacklogo">
         <ul class="navbarMenu">
           <li>
-            <a href="#">
+            <a href="#section2">
               Food delivery
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#fourthSection">
               How it works
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#fifthSection">
               Our cities
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#eighthSection">
+              Sign up
+            </a>
+          </li>
+        </ul>
+
+        <a id="navButton">
+          <i class="ion-navicon-round" id="navButtonIcon"></i>
+        </a>
+      </div>
+
+      <div id="navbarItems" class="animated flipInX displayNone">
+        <ul>
+          <li>
+            <a href="#section2">
+              Food delivery
+            </a>
+          </li>
+          <li>
+            <a href="#fourthSection">
+              How it works
+            </a>
+          </li>
+          <li>
+            <a href="#fifthSection">
+              Our cities
+            </a>
+          </li>
+          <li>
+            <a href="#eighthSection">
               Sign up
             </a>
           </li>
         </ul>
       </div>
+
     </nav>
 
     <div class="firstSectionTextBox">
@@ -67,8 +115,8 @@
         Goodbye junk food.
         <br> Hello super healthy meals
       </h1>
-      <a class="btn btn-full" href="#">I’m hungry</a>
-      <a class="btn btn-outline" href="#">Show me more</a>
+      <a class="btn btn-full" href="#seventhSection">I’m hungry</a>
+      <a class="btn btn-outline" href="#section2">Show me more</a>
     </div>
   </header>
 
@@ -78,18 +126,20 @@
     <div class="row">
       <h2>Get food fast &mdash; not fast food.</h2>
       <p class="paragraphAfterh2">
-        Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us
+        Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking.
+        So let us
         take care of that, we’re really good at it, we promise!
       </p>
     </div>
 
-    <div class="row">
+    <div class="row" id="animateSectionTwo">
 
       <div class="col span-1-of-4 box">
         <i class="ion-ios-infinite-outline iconSize"></i>
         <h3>Up to 365 days/year</h3>
         <p>
-          Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to
+          Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can
+          also choose to
           order more flexibly if that's your style.
         </p>
       </div>
@@ -98,7 +148,8 @@
         <i class="ion-ios-stopwatch-outline iconSize"></i>
         <h3>Ready in 20 minutes</h3>
         <p>
-          You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the
+          You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We
+          work with the
           best chefs in each town to ensure that you're 100% happy.
         </p>
       </div>
@@ -107,7 +158,8 @@
         <i class="ion-ios-nutrition-outline iconSize"></i>
         <h3>100% organic</h3>
         <p>
-          All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your
+          All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics.
+          Good for your
           health, the environment, and it also tastes better!
         </p>
       </div>
@@ -116,7 +168,8 @@
         <i class="ion-ios-cart-outline iconSize"></i>
         <h3>Order anything</h3>
         <p>
-          We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing
+          We don't limit your creativity, which means you can order whatever you feel like. You can also choose from
+          our menu containing
           over 100 delicious meals. It's up to you!
         </p>
       </div>
@@ -200,7 +253,7 @@
     <div class="row">
 
       <div class="col span-1-of-2 step-box clearfix">
-        <img src="./resources/img/app-iPhone.png" alt="App Screen" class="appScreen">
+        <img src="./resources/img/app-iPhone.png" alt="App Screen" class="appScreen" id="phoneAnimation">
       </div>
 
       <div class="col span-1-of-2 step-box clearfix">
@@ -348,7 +401,8 @@
 
       <div class="col span-1-of-3">
         <blockquote>
-          Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver.
+          Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is
+          a life-saver.
           Now that I got used to it, I couldn't live without my daily meals!
         </blockquote>
         <cite>
@@ -359,7 +413,8 @@
 
       <div class="col span-1-of-3">
         <blockquote>
-          Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but
+          Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here
+          in Lisbon, but
           no one comes even close to Omifood. Me and my family are so in love!
         </blockquote>
         <cite>
@@ -370,7 +425,8 @@
 
       <div class="col span-1-of-3">
         <blockquote>
-          I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood.
+          I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up
+          with Omnifood.
           Best food delivery service in the Bay Area. Keep up the great work!
         </blockquote>
         <cite>
@@ -391,7 +447,7 @@
 
     <div class="row">
       <div class="col span-1-of-3">
-        <div class="plan-box">
+        <div class="plan-box" id="premiumPriceAnimation">
 
           <div>
             <h3>Premium</h3>
@@ -676,9 +732,25 @@
 
   <!-- Adding Scripts -->
   <!-- From : https://www.jsdelivr.com/ -->
-  
+
+  <!-- Adding jquery From - https://developers.google.com/speed/libraries/ -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <!-- Making HTML5 tags unable in old browsers -->
+  <!-- HTML5Shiv -->
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+
+  <!-- Making CSS psudo classes enable on internet explorer 6-8 -->
+  <!-- Selectivizr -->
+  <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+
+  <!-- for making Sticky bar -->
+  <!-- Waypoint js -->
+  <script src="./vendors/js/jquery.waypoints.min.js"></script>
+
+  <!-- Main.js -->
+  <script src="./resources/js/main.js"></script>
+
 
 </body>
 

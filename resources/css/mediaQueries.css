@@ -131,6 +131,17 @@
     .navbarMenu {
         display: none;
     }
+
+    /* Navbar Button */
+    #navButton {
+        display: block;
+        color: white;
+        float: right;
+        margin-top: 20px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
     .iconSize {
         font-size: 500%;
     }
