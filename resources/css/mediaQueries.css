@@ -1,0 +1,190 @@
+/* Big tablet to 1200px width smaller then 1140 */
+
+@media only screen and (max-width: 1200px) {
+    .firstSectionTextBox {
+        width: 100%;
+        padding: 0 2%;
+    }
+    .row {
+        padding: 0 2%
+    }
+}
+
+/* Small tablets to big tablets */
+
+@media only screen and (max-width: 1023px) {
+    body {
+        font-size: 16px;
+    }
+    /* Reducting padding inside sections */
+    #section2 {
+        padding: 60px 0;
+    }
+    #fourthSection {
+        padding: 60px 0;
+    }
+    #fifthSection {
+        padding: 60px 0;
+    }
+    #sixthSection {
+        padding: 60px 0;
+    }
+    #seventhSection {
+        padding: 60px 0;
+    }
+    #eighthSection {
+        padding: 60px 0;
+    }
+    .paragraphAfterh2 {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .step-box:first-child img {
+        width: 65%;
+    }
+    .work-step {
+        margin-bottom: 40px;
+    }
+    .step-box:last-child {
+        padding-left: 3%;
+        margin-top: 40px;
+    }
+    /* Fixing text size and icon size */
+    .city-features i {
+        width: 15px;
+        font-size: 90%;
+        margin-right: 5px;
+    }
+    .city-features span {
+        font-size: 85%;
+    }
+    .twitterLinks {
+        font-size: 90%;
+    }
+    .plan-box {
+        width: 100%;
+        margin-left: 0;
+    }
+    .premiumPrice {
+        font-size: 250%;
+    }
+    .contact-form {
+        width: 80%;
+    }
+    .nav-links,
+    .social-links {
+        font-size: 90%;
+    }
+    .nav-links li,
+    .social-links li {
+        margin-right: 15px;
+    }
+    .copyRightText {
+        font-size: 90%;
+        margin-top: 15px;
+    }
+    footer {
+        padding: 30px 0;
+    }
+}
+
+/* Small phones to small tablets: from 481 to 767 */
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+    .logoImage {
+        height: 65px;
+    }
+    /* Reducting padding inside sections */
+    #section2 {
+        padding: 40px 0;
+    }
+    #fourthSection {
+        padding: 40px 0;
+    }
+    #fifthSection {
+        padding: 40px 0;
+    }
+    #sixthSection {
+        padding: 40px 0;
+    }
+    #seventhSection {
+        padding: 40px 0;
+    }
+    #eighthSection {
+        padding: 40px 0;
+    }
+    .row,
+    .paragraphAfterh2 {
+        padding: 0 4%;
+    }
+    .paragraphAfterh2 {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+    .col {
+        width: 100%;
+        margin: 0 0 2% 0;
+    }
+    .navbarMenu {
+        display: none;
+    }
+    .iconSize {
+        font-size: 500%;
+    }
+    .work-step div {
+        font-size: 120%;
+        padding: 5px;
+        height: 35px;
+        width: 35px;
+        margin-right: 10px;
+    }
+    .step-box:first-child {
+        text-align: center;
+    }
+    .step-box:first-child img {
+        width: 35%;
+    }
+    .work-step {
+        margin-bottom: 40px;
+    }
+    .centringOnSmallView {
+        text-align: center;
+    }
+    .figureContainer li {
+        width: 50%;
+        display: block;
+        float: left;
+    }
+    .nav-links,
+    .social-links {
+        float: none;
+        text-align: center;
+    }
+}
+
+/* Small phones: from 0 to 480 */
+
+@media only screen and (max-width: 480px) {
+    .contact-form {
+        width: 100%;
+    }
+    .nav-links,
+    .social-links {
+        float: none;
+        text-align: center;
+    }
+    .firstSectionTextBox {
+        width: 100%;
+        padding: 0 4%;
+    }
+    .figureContainer li {
+        width: 100%;
+        float: none;
+    }
+    .centringOnSmallView a:last-of-type img {
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,639 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* 
+    Removing Margin padding from all elements and setting box-sizing to border box : 
+    If you set box-sizing: border-box; on an element padding and border are included in the width and height
+  */
+}
+
+body {
+    background-color: #fff;
+    color: #555;
+    font-weight: 300;
+    font-size: 18px;
+    text-rendering: optimizeLegibility;
+    font-family: lato, Arial, Helvetica, sans-serif;
+    /* 
+    The text-rendering property in CSS allows you to choose quality of text over speed (or vice versa) allowing you to fine tune optimization by suggesting to the browser as to how it should render text on the screen
+
+    There are four possible values:
+
+    auto (default) - The browser makes educated guesses about when to optimize for speed, legibility, and geometric precision while drawing text. Be aware that different browsers interpret this value differently.
+
+    optimizeSpeed - The browser emphasizes rendering speed over legibility and geometric precision when drawing text. It disables kerning and ligatures.
+
+    optimizeLegibility - The browser emphasizes legibility over rendering speed and geometric precision. This enables the use of special kerning and optional ligature information that may be contained in the font file for certain fonts.
+
+    geometricPrecision - The browser emphasizes geometric precision over rendering speed and legibility. Certain aspects of fonts—such as kerning—don't scale linearly, so geometricPrecision can make text using those fonts look good. When SVG font is scaled, the browser calculates pixel size, then rounds to the nearest integer. The geometricPrecision property allows for more fluid scaling. Note: Only WebKit browsers apply this fluid value, Gecko treats the value just like optimizeLegibility.
+  */
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* background-image: linear-gradient(rgba(20, 43, 119, 0.808), rgba(21, 190, 182, 0.7)), url('./img/firstSectionImage.jpg'); */
+
+header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('./img/firstSectionImage.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/firstSectionImage.jpg');
+    background-size: cover;
+    background-position: center;
+    /* for paralax effect */
+    background-attachment: fixed;
+    height: 100vh
+}
+
+.logoImage {
+    height: 100px;
+    margin-top: 15px;
+}
+
+.navbarMenu {
+    list-style: none;
+    float: right;
+    clear: both;
+    margin-top: 35px;
+}
+
+.navbarMenu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.navbarMenu li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+    font-size: 90%;
+    -webkit-transition: border 0.4s;
+    transition: border 0.4s;
+}
+
+.navbarMenu li a:hover,
+.navbarMenu li a:active {
+    border-bottom: 2px solid #d35400;
+}
+
+.firstSectionTextBox {
+    width: 1140px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* https://css-tricks.com/almanac/properties/t/transform/ */
+}
+
+.firstSectionTextBox h1 {
+    color: #fff;
+    font-size: 200%;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/* Diffrence between Inline and inline block elements */
+
+/* https://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block */
+
+/* Picking up colors for button https://flatuicolors.com/ */
+
+/* Find lighter and darker shades of any color http://www.0to255.com/ */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 300;
+    border-radius: 200px;
+    border: 1px solid #d35400;
+    font-size: 90%;
+    /* Adding a bit of transition while changing background-color and color of text */
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-full {
+    background-color: #d35400;
+    color: white;
+}
+
+.btn-outline {
+    margin-left: 10px;
+    color: #d35400;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    background-color: #c24d00;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+    background-color: #c24d00;
+    color: #fff;
+}
+
+/* Section 2 Starts */
+
+#section2 {
+    /* Adding whitespace in top and bottom of the section */
+    padding: 80px 0;
+}
+
+/* Styling text for heading 2 */
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 180%;
+    margin-bottom: 20px;
+}
+
+/* UnderLine after section2's heading*/
+
+h2::after {
+    display: block;
+    content: ' ';
+    width: 80px;
+    height: 2px;
+    background: #d35400;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Styling Paragraph after heading */
+
+/* Line Height */
+
+/* https://www.w3schools.com/cssref/pr_dim_line-height.asp */
+
+.paragraphAfterh2 {
+    line-height: 125%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+/* Boxes inside section 2 */
+
+.box {
+    padding: 1%;
+}
+
+.box h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 110%;
+}
+
+.box p {
+    line-height: 130%;
+    font-size: 90%;
+}
+
+.iconSize {
+    font-size: 350%;
+    color: #d35400;
+}
+
+/* Section 3 */
+
+/* 
+
+  - Making Image Grid
+  - Zoom in transition using css only
+  - Making image element darker
+
+*/
+
+/* #thirdSection {
+  width: 100%
+} */
+
+.figureContainer {
+    list-style: none;
+    width: 100%;
+}
+
+.figureContainer li {
+    width: 25%;
+    display: block;
+    float: left;
+}
+
+.figureContainer li figure {
+    width: 100%;
+    /* When image's size is greater then the container figure */
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* We are creating this dark image effact using black background color and reduucing the opacity of the image */
+
+/* read about css property opacity - https://www.w3schools.com/css/css_image_transparency.asp */
+
+.figureContainer li figure img {
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+    transition: opacity 0.4s, -webkit-transform 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s, -webkit-transform 0.4s;
+}
+
+.figureContainer li figure img:hover {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+/* Section 4 */
+
+/* 
+
+  - How to draw circls with Css
+  - How to make seperation between sections
+  - Place playstore and appstore buttons
+
+*/
+
+#fourthSection {
+    clear: both;
+    padding: 80px 0;
+    background-color: #f4f4f4;
+}
+
+/* Text-alighn property not only works for text elements it also works for inline and inline-block elemts and img is one of them */
+
+.step-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+}
+
+.step-box:first-child img {
+    width: 40%;
+}
+
+.step-box:last-child {
+    padding-left: 3%;
+    margin-top: 50px;
+}
+
+.work-step {
+    margin-bottom: 50px;
+}
+
+.work-step div {
+    font-size: 150%;
+    border: 2px solid #d35400;
+    border-radius: 50%;
+    padding: 7px;
+    /* display: inline-block; */
+    height: 50px;
+    width: 50px;
+    color: #d35400;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+}
+
+.work-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.appIcon {
+    height: 50px;
+    width: auto;
+    margin-right: 10px
+}
+
+/* Creating clearfix class */
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix::after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* this class clears float, and we should clear floats after using them because it may result in unexpected results */
+
+/* Section 5 */
+
+/* 
+
+  - Aligning small icons with text
+  - Styling generic links
+
+*/
+
+#fifthSection {
+    padding: 80px 0;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-features {
+    margin-bottom: 5px;
+}
+
+.city-features i {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #d35400;
+    font-size: 120%;
+    margin-right: 10px;
+    /* Align icon in the middle */
+    line-height: 120%;
+    vertical-align: middle;
+}
+
+/* Styling link */
+
+.twitterLinks {
+    text-decoration: none;
+    color: #d35400;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #d35400;
+    -webkit-transition: color 0.2s, border 0.2s;
+    transition: color 0.2s, border 0.2s;
+}
+
+.twitterLinks:hover {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* Section 6 */
+
+/* 
+
+ - Working with background CSS images
+
+*/
+
+#sixthSection {
+    padding: 80px 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(./img/back-customers.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./img/back-customers.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+blockquote {
+    padding: 2%;
+    line-height: 145%;
+    font-style: italic;
+    position: relative;
+    margin-top: 30px;
+}
+
+/* https://css-tricks.com/snippets/html/glyphs/ - For quote mark */
+
+blockquote::before {
+    content: '\201C';
+    font-size: 500%;
+    position: absolute;
+    top: -5px;
+    left: -10px;
+}
+
+cite {
+    display: block;
+}
+
+cite img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Seventh Section */
+
+/* 
+
+  - Design with border radious
+  - Play with box -shadow
+
+*/
+
+#seventhSection {
+    padding: 80px 0px;
+    background-color: #f4f4f4
+}
+
+#seventhSection h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 110%;
+}
+
+.plan-box {
+    background-color: #fff;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 5px;
+    /* https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
+    /* box-shadow: x y blured color */
+    -webkit-box-shadow: 0 2px 2px #e3e3e3;
+    box-shadow: 0 2px 2px #e3e3e3;
+}
+
+.plan-box div {
+    padding: 15px;
+    border: 1px solid #e8e8e8;
+}
+
+.premiumPrice {
+    font-size: 300%;
+    color: #d35400;
+}
+
+.premiumPrice span {
+    /* We are taking font size with respect to span's parent which is paremium price */
+    font-size: 30%;
+}
+
+.plan-box ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.plan-box ul li i {
+    font-size: 150%;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: #d35400;
+}
+
+.plan-box div:first-child {
+    background-color: #fcfcfc
+}
+
+.plan-box div:last-child {
+    text-align: center;
+}
+
+/* Eighth Section - Working with forms */
+
+#eighthSection {
+    padding: 80px 0px;
+}
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* input, textarea, select {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+} */
+
+/* Now targetting only input type text and email */
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+/* Making input type submit same as full button */
+
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 300;
+    border-radius: 200px;
+    border: 1px solid #d35400;
+    font-size: 90%;
+    text-transform: capitalize;
+    /* Adding a bit of transition while changing background-color and color of text */
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+input[type=submit] {
+    background-color: #d35400;
+    color: white;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+/* Removing blue outline ( after getting clicked on or focused ) from all html elements */
+
+*:focus {
+    outline: none;
+}
+
+/* Section 9 or footer */
+
+footer {
+    padding: 40px 0px;
+    background: #333;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.nav-links li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-links li:last-of-type {
+    margin-right: 0px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #888;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.social-links li a {
+    text-decoration: none;
+    color: #888;
+    font-size: 110%;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #fff;
+}
+
+/* Social Media colors - https://www.lockedownseo.com/social-media-colors/ */
+
+.copyRightText {
+    text-align: center;
+    font-size: 90%;
+    color: #888;
+    margin-top: 20px;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+    color: #1da1f2;
+}
+
+.ion-social-googleplus:hover {
+    color: #db4437;
+}
+
+.ion-social-instagram:hover {
+    color: #f46f30;
+}
+
+/* CSS AutoPrefixer is used to make it cross-browser */
